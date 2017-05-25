@@ -30,6 +30,7 @@ public class Resources {
 	}
 
 	private InputStream getResourceAsStream(String resource) {
+		//classloader fun
 		final InputStream in = getContextClassLoader().getResourceAsStream(resource);
 
 		return in == null ? getClass().getResourceAsStream(resource) : in;
