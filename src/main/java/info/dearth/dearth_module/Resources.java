@@ -30,7 +30,8 @@ public class Resources {
 	}
 
 	private InputStream getResourceAsStream(String resource) {
-		//classloader fun
+		//probably not necessary when running from command line, but makes it 
+		//usable in other environments
 		final InputStream in = getContextClassLoader().getResourceAsStream(resource);
 
 		return in == null ? getClass().getResourceAsStream(resource) : in;
